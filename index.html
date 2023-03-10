@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Microsoft-To Do</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <img class="app-icon" src="applauncher.png" alt="App Launcher">
+            <a href="#"><strong>To Do</strong></a>
+            <img class="search-icon" src="searchiconresized.jpg" alt="search icon">
+            <input type="search" name="search">
+        </div>
+        <div class="menu-section">
+            <i class="fa fa-bars"></i>
+            <ul class="list">
+                <li>
+                    <i class="fa-regular fa-sun"></i>
+                    <a href="#">My Day</a>
+                </li>
+                <li>
+                    <i class="fa-regular fa-star"></i>
+                    <a href="#">Important</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <a href="#">Planned</a>
+                </li>
+                <li>
+                    <i class="fa-regular fa-user"></i>
+                    <a href="#">Assigned to me</a>
+                </li>
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">Tasks</a>
+                </li>
+                <hr>
+            </ul>
+            <div class="new-list-container">
+                <div class="new-list color-blue">
+                    <i class="fa fa-plus"></i>
+                    <input type="text" placeholder="New list">
+                </div>
+                <div class="new-group color-blue">
+                    <i title="create group" class="fa-regular fa-plus-square"></i>
+                </div>
+            </div>
+            <div class="menu-icons">
+                <i title="Mail" class="fa-regular fa-envelope"></i>
+                <i title="Calendar" class="fa-solid fa-calendar-days"></i>
+                <i title="People" class="fa fa-users"></i>
+                <i title="Files" class="fa fa-paperclip"></i>
+                <i title="To do" class="fa fa-check"></i>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content-header">
+                <i class="fa-regular fa-sun"></i>
+                <strong>My Day</strong>
+                <a href="#"><i title="List Options Menu" class="fa fa-ellipsis-h"></i></a>
+                <span title="sort" class="sort">
+                    <i class="fa fa-sort"></i>Sort
+                </span>
+                <span title="Suggestions" class="suggestion">
+                    <i class="fa-regular fa-lightbulb"></i>Suggestions
+                </span>
+            </div>
+            <p class="date"></p>
+            <div class="add-task color-blue">
+                <i class="fa-regular fa-circle"></i>
+                <input type="text" id="task" placeholder="Add a task">
+            </div>
+            <div class="content-icons">
+                <i title="Add due date" class="fa-solid fa-calendar-days"></i>
+                <i title="Remind me" class="fa-regular fa-bell"></i>
+                <i title="Repeat" class="fa fa-repeat"></i>
+                <button type="button" onclick=addTask() class="button">Add</button>
+            </div>
+            <div id="task-container">
+                <div id="incomplete-container"></div>
+                <div class="complete-header">
+                    <i job="Expand" class="fa-solid fa-chevron-down"></i>
+                    <span>Completed</span>
+                    <span></span>
+                </div>
+                <div id="complete-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
