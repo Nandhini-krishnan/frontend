@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="overlay"> 
+    </div>
+    <div class="loader"></div>
+    <div class="container">
+        <div class="add-user">
+            <button type="button" class="add-btn">Create user</button>
+        </div>
+        <div class="table-container">
+        </div>
+    </div>
+    <div class="modal">
+        <div class="header">
+            <h3>REGISTRATION FORM</h3>
+            <i class="fa-solid fa-xmark close"></i>
+        </div>
+        <form id="form">
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="name"><i class="fa-regular fa-user"></i></label>
+                    <input id="name" type="text" name="name" placeholder="Enter your Name">
+                </div>
+                <div class="error-container"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="email"><i class="fa-regular fa-envelope"></i></label>
+                    <input id="email" type="email" name="email" placeholder="Enter your Mail-id">
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="form-group">
+                <div class="gender">
+                    <span>Gender :</span>
+                    <p>
+                        <input id="male" type="radio" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input id="female" type="radio" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </p>
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="mobile"><i class="fa-solid fa-mobile-screen"></i></label>
+                    <input id="mobileNumber" type="tel" name="mobileNumber" placeholder="Enter your mobile number">
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="form-group date">
+                <div class="gender">
+                    <label for="dateOfBirth">Date of Birth :</label>
+                    <input id="dateOfBirth" type="date" name="dateOfBirth">
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="address"><i class="fa fa-home"></i></label>
+                    <textarea id="address" name="address" class="address" placeholder="Enter your address"></textarea>
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <select id="location" name="location" class="location">
+                        <option value="" name="country" selected hidden>Select a country</option>
+                        <option value="India" name="country">India</option>
+                        <option value="South Korea" name="country">South Korea</option>
+                        <option value="USA" name="country">USA</option>
+                        <option value="canada" name="country">Canada</option>
+                    </select>
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="password"><i class="fa-solid fa-lock"></i></label>
+                    <input id="password" type="password" name="password" placeholder="Enter your password"></input>
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="confirmPassword"><i class="fa-solid fa-lock"></i></label>
+                    <input id="confirmPassword" type="password" name="confirmPassword"
+                        placeholder="Confirm your password"></input>
+                </div>
+                <div class="error-container"></div>
+            </div>
+            <div class="submit-btn">
+                <input id="submit" type="submit" value="Submit"></input>
+            </div>
+        </form>
+    </div>
+    <script src="js/formValidation.js"></script>
+</body>
+
+</html>
