@@ -1,0 +1,232 @@
+:root {
+    --form-background: rgb(238, 237, 236);
+    --submit-color: rgb(167, 177, 211);
+    --body-background: #dfdfdf;
+    --shadow: #bdbaba;
+    --white: #fff;
+    --icon-color: rgb(97, 94, 92);
+    --green: rgb(1, 116, 1);
+    --red: rgb(223, 52, 0);
+    --blue:  #728fd1;
+    --header-blue: rgb(0, 0, 255);
+    --table-border: rgb(183, 166, 214);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Segoe", "Segoe UI", "Arial", "sans-serif";
+  }
+  
+  body {
+    background-color: var(--body-background)
+  }
+
+.modal {
+    padding: 0.5em 1.5em;
+    width: 40%;
+    margin: 0 auto;
+    background-color: var(--form-background);
+    border-radius: 5px;
+    box-shadow: 0 0 4px var(--shadow);
+    position: absolute;
+    top:0;
+    right: 10em;
+    left: 10em;
+}
+
+.close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.close:hover {
+    font-size: 1.5em;
+}
+
+.header {
+    position: relative;
+}
+
+h3 {
+    color: var(--blue);
+    text-align: center;
+}
+
+.form-item,
+.gender {
+    margin-top: 1em;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 4px var(--shadow);
+    font-size: 0.9em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.form-item {
+    display: flex;
+}
+
+.form-item i {
+    padding: 0.5em;
+    font-size: 1.1em;
+    color: var(--icon-color);
+}
+
+.error-container {
+    padding-top: 0.25em;
+    font-size: small;
+    color: var(--red);
+}
+
+input:not(input[type="radio"], [type="submit"], [type="date"]) {
+    padding: 0.3em;
+    border: none;
+    width: 90%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.address {
+    padding-left: 0.5em;
+    width: 90%;
+    border: none;
+}
+
+.address::placeholder {
+    padding-top: 0.5em;
+    font-size: 1.1em;
+}
+
+.address:focus {
+    outline: none;
+}
+
+.location {
+    padding-left: 0.5em;
+    width: 100%;
+    border: none;
+    font-size: 1em;
+}
+
+.location:focus {
+    outline: none;
+}
+
+.gender {
+    margin-top: 1em;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 4px var(--shadow);
+    font-size: 0.9em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.gender span {
+    padding-left: 0.5em;
+}
+
+.gender p {
+    margin-top: 0.5em;
+    display: flex;
+    gap: 0.25em;
+}
+
+input[type="radio"] {
+    margin-left: 0.5em;
+}
+
+label[for="dateOfBirth"] {
+    display: block;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+}
+
+input[type="submit"] {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 20%;
+    border: none;
+    padding: 0.5em;
+    color: var(--white);
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+input[type="date"] {
+    margin-left: 0.5em;
+    border: none;
+}
+
+.form-group span {
+    padding-left: 0.5em;
+}
+
+.submit-btn {
+    margin-top: 1em;
+    display: flex;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 4px var(--shadow);
+    font-weight: bold;
+}
+
+input::placeholder {
+    font-size: 1.1em;
+}
+
+.display {
+    display: block;
+}
+
+.blur {
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
+} 
+
+.overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    border:1px solid;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(134, 134, 134, 0.5);
+    display: none;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    height: 2em;
+    width: 2em;  
+    border-radius: 100%;
+    border: 5px solid var(--white);
+    border-top: 5px solid var(--header-blue);
+    display: none;
+    animation: spin 0.5s infinite linear;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }   
+}

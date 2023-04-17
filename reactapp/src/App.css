@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Segoe", "Segoe UI", "Arial", "sans-serif";
+}
+
+body {
+  background-color: var(--body-background)
+}
